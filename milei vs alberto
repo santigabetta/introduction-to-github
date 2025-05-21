@@ -1,0 +1,94 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ScrollArea } from "@/components/ui/scroll-area";
+
+export default function ComparativaEconomica() {
+  return (
+    <div className="p-6 max-w-6xl mx-auto">
+      <h1 className="text-4xl font-bold mb-4">Comparativa Económica: Javier Milei vs Alberto Fernández</h1>
+      <p className="text-lg mb-6">Un análisis detallado de los principales indicadores económicos entre los gobiernos de Javier Milei (2023–) y Alberto Fernández (2019–2023).</p>
+
+      <Tabs defaultValue="contexto" className="w-full">
+        <TabsList className="mb-4">
+          <TabsTrigger value="contexto">Contexto</TabsTrigger>
+          <TabsTrigger value="inflacion">Inflación</TabsTrigger>
+          <TabsTrigger value="fiscal">Déficit y Gasto</TabsTrigger>
+          <TabsTrigger value="cambio">Tipo de Cambio</TabsTrigger>
+          <TabsTrigger value="pobreza">Pobreza y Salarios</TabsTrigger>
+          <TabsTrigger value="actividad">Actividad Económica</TabsTrigger>
+          <TabsTrigger value="deuda">Deuda y FMI</TabsTrigger>
+          <TabsTrigger value="subsidios">Subsidios y Tarifas</TabsTrigger>
+          <TabsTrigger value="conclusion">Conclusión</TabsTrigger>
+        </TabsList>
+
+        <ScrollArea className="h-[600px]">
+          <TabsContent value="contexto">
+            <Card><CardContent className="p-4">
+              <h2 className="text-2xl font-semibold mb-2">Contexto de Asunción</h2>
+              <p><strong>Alberto Fernández</strong> asumió en diciembre de 2019 con una economía en recesión, inflación alta y sin acceso a mercados. La pandemia profundizó la crisis. <br />
+              <strong>Javier Milei</strong> asumió en diciembre de 2023 con 211% de inflación, pobreza del 45%, y reservas negativas. Implementa un plan de ajuste fiscal extremo desde el inicio.</p>
+            </CardContent></Card>
+          </TabsContent>
+
+          <TabsContent value="inflacion">
+            <Card><CardContent className="p-4">
+              <h2 className="text-2xl font-semibold mb-2">Inflación</h2>
+              <p>Durante el gobierno de Fernández, la inflación se duplicó: 53% en 2019 a 211% en 2023. Milei recibe ese récord y, con ajuste monetario y fiscal, logra reducir la inflación mensual de 25% a menos del 9% en abril 2024. Aún con inflación acumulada alta, se observa desaceleración.</p>
+            </CardContent></Card>
+          </TabsContent>
+
+          <TabsContent value="fiscal">
+            <Card><CardContent className="p-4">
+              <h2 className="text-2xl font-semibold mb-2">Déficit y Gasto Público</h2>
+              <p>Fernández mantuvo déficit fiscal primario alto, financiado con emisión. Milei implementó ajuste inmediato: recorte de obra pública, subsidios y transferencias, logrando superávit primario en el primer trimestre 2024.</p>
+            </CardContent></Card>
+          </TabsContent>
+
+          <TabsContent value="cambio">
+            <Card><CardContent className="p-4">
+              <h2 className="text-2xl font-semibold mb-2">Tipo de Cambio</h2>
+              <p>Fernández mantuvo el dólar oficial retrasado con brechas superiores al 100%. Milei devaluó un 118% en diciembre y mantiene un crawling peg del 2% mensual. La brecha se redujo, aunque persisten restricciones cambiarias.</p>
+            </CardContent></Card>
+          </TabsContent>
+
+          <TabsContent value="pobreza">
+            <Card><CardContent className="p-4">
+              <h2 className="text-2xl font-semibold mb-2">Pobreza y Salario Real</h2>
+              <p>La pobreza pasó del 35% al 45% con Fernández. Con Milei, se estima ya supera el 50% en 2024. El salario real cayó fuertemente con ambos gobiernos, pero más abruptamente con el ajuste de Milei.</p>
+            </CardContent></Card>
+          </TabsContent>
+
+          <TabsContent value="actividad">
+            <Card><CardContent className="p-4">
+              <h2 className="text-2xl font-semibold mb-2">Actividad Económica</h2>
+              <p>Fernández tuvo una fuerte caída en 2020 (-9.9%), una recuperación en 2021 (+10.4%) y estancamiento después. Milei enfrenta una recesión provocada por el ajuste, con estimaciones de caída del PBI del 3% al 4% en 2024.</p>
+            </CardContent></Card>
+          </TabsContent>
+
+          <TabsContent value="deuda">
+            <Card><CardContent className="p-4">
+              <h2 className="text-2xl font-semibold mb-2">Deuda y FMI</h2>
+              <p>Fernández reestructuró la deuda externa en 2020 y firmó acuerdo con el FMI. Milei cumple metas fiscales sin emitir nueva deuda. Busca recomponer confianza y eventualmente volver a los mercados.</p>
+            </CardContent></Card>
+          </TabsContent>
+
+          <TabsContent value="subsidios">
+            <Card><CardContent className="p-4">
+              <h2 className="text-2xl font-semibold mb-2">Subsidios y Tarifas</h2>
+              <p>Fernández congeló tarifas durante la pandemia, elevando subsidios. Milei eliminó subsidios en transporte y energía, provocando aumentos tarifarios y reducción del gasto público.</p>
+            </CardContent></Card>
+          </TabsContent>
+
+          <TabsContent value="conclusion">
+            <Card><CardContent className="p-4">
+              <h2 className="text-2xl font-semibold mb-2">Conclusión General</h2>
+              <p><strong>Fernández:</strong> intervencionismo, fuerte emisión, pobreza en alza, economía estancada.<br />
+              <strong>Milei:</strong> ajuste fiscal ortodoxo, baja de inflación mensual, recesión fuerte, mayor pobreza en el corto plazo.<br />
+              El tiempo dirá si el ajuste de Milei genera estabilidad o más desequilibrios sociales.</p>
+            </CardContent></Card>
+          </TabsContent>
+        </ScrollArea>
+      </Tabs>
+    </div>
+  );
+}
